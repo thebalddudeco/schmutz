@@ -26,4 +26,12 @@ Replace sample concepts with actual products and listing links. Confirm software
 
 ## Brand system
 
-Open `/brand/` for the visual guide and `/downloads/schmutz-brand-kit.zip` for the package. Includes outlined SVG and transparent PNG logos, monograms, 24 original utility icons, SVG sprite, favicon files, social assets, swatches, design tokens, and an original Schmutz Symbols TTF/WOFF font. Georgia and Arial text font binaries are not bundled. `python scripts/brand-kit.py` regenerates artwork from locally installed fonts; the guide files are maintained separately.
+The approved SVG, WebP and ICO package is in `public/brand/approved/`. The matching logo, icon, favicon and social exports also populate their named folders under `public/brand/`. Original user-supplied masters remain untouched in `public/brand/NEW ASSETS/`. The current overview is `public/brand/brand-overview.webp`.
+
+Do not run the legacy `scripts/brand-kit.py`: it generates superseded artwork. The approved export helper and all temporary work from the earlier chat are preserved in `_migration/previous-chat/`. Read `PROJECT-HANDOFF.txt` for the detailed decisions and remaining work. Historical status in that handoff describes the prior session; this session has verified write access and applied the website patch.
+
+## Consolidation on October 21, 2026
+
+Canonical project folder: `A:\Schmutz`. Git history is restored here. The approved website patch and latest exports, including Frame 18, are applied. `_migration/2026-10-21-before-consolidation/` preserves the earlier site and build. `_migration/previous-chat/` preserves the previous temporary exports, generators, ZIPs, and handoff. These local archives are excluded from Git and the website build.
+
+Remaining work: pattern replacements and additional social layouts were not completed in the earlier chat; the original patterns are preserved. GitHub publishing, domain connection, and real product listings are still pending. Consolidating local files does not publish the website.

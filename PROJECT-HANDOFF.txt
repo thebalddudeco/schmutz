@@ -1,0 +1,72 @@
+SCHMUTZ WEBSITE HANDOFF
+
+USER REQUEST AND AUTHORIZATION
+Justin explicitly requests continuing this website in a new chat rooted at A:\Schmutz with write access. He authorizes applying the new approved brand assets and pending website changes there. His priority is to finish updating the actual project, not create more temporary exports. Verify the new session filesystem permissions first. User authorization does not itself override a session sandbox. The previous session could read A: but not write it and had approval policy never. Do not bypass restrictions. If the new session permits writes, proceed without asking the same permission again.
+
+PROJECT
+A:\Schmutz is the entire website. User manually moved it from E:. Do not move it back or create website copies on E:. Static HTML/CSS/JS, no dependencies. public/ contains website, catalog, studio editor, assets and brand. scripts/check.mjs, build.mjs, serve.mjs. npm unavailable previously; node v24 and Python with Pillow/fontTools/numpy available. Run node scripts/check.mjs from project, then build when writable. Inspect applicable AGENTS.md first. Preserve user's current modifications, compare before applying patches.
+
+IMMEDIATE WORK
+Update actual folders A:\Schmutz\public\brand\favicons, icons, logos, social, patterns with the approved artwork. The previous assistant only updated a temporary export and preview, not these folders. Audit and migrate site references and brand guide, remove obsolete generated brand artwork from active use, and update brand-overview.webp. Do not blindly delete approved source files or unrelated website/product images. Do not run the old brand-kit.py generator, which uses superseded artwork. There are no newly approved pattern exports yet: create suitable patterns using the exact approved symbols, without redesigning their geometry, and replace old symbol references. Social exports also need an audit beyond the one prepared sharing image. Check that all requested folders are actually updated and referenced before claiming completion.
+
+APPROVED SOURCE
+A:\Schmutz\public\brand\NEW ASSETS
+Frame 1.svg through Frame 17.svg. Raster copies also exist, plus Frame 18.png only. Preserve originals. Logo exports only .svg, .webp, .ico. No generated PNG/JPEG, including overview images. ICO exports use BMP frames internally, not embedded PNG. Frame 18 is exported as lossless WebP, not falsely traced to SVG. Frame 17 was called live text by user but contains outlined paths; preserve byte-for-byte and do not claim it is editable text.
+Frame map:
+1 monogram-paper-rust; 2 wordmark-paper-rust-tm; 3 wordmark-paper-rust-asterisk;
+4 monogram-paper; 5 wordmark-paper-tm; 6 wordmark-paper-asterisk;
+7 monogram-ink-rust; 8 wordmark-ink-rust-tm; 9 wordmark-ink-rust-asterisk;
+10 asterisk-paper-01; 11 asterisk-paper-02; 12 asterisk-ink;
+13 monogram-rust-paper; 14 wordmark-rust-white-tm; 15 wordmark-rust-paper-asterisk; 16 asterisk-rust.
+Frames 10/11 visually similar but not byte-identical. Preserve both.
+
+EXISTING COMPLETED EXPORTS, REUSE INSTEAD OF REGENERATING
+C:\Users\info\AppData\Local\Temp\schmutz-approved-exports
+C:\Users\info\AppData\Local\Temp\schmutz-approved-assets-svg-webp-ico.zip
+Includes 51 SVG, 198 WebP (after adding Frame18), 14 ICO, plus guide/manifest/HTML. Source SHA256 hashes checked against current SVG masters, all unchanged. Original-canvas SVGs exact bytes; tight versions change only viewBox/outer clear space. Geometry and internal spacing preserved.
+Wordmark WebP widths320,640,1280,2560; monogram/asterisk64,128,256,512,1024. Six square/circle icon sets with ink/paper/rust backgrounds; favicon WebP16,24,32,48,64,128,180,192,256,512 and ICO16,24,32,48,64,128,256. Frame18 raster converted320,640,1280,original width2048 without upscaling.
+C:\Users\info\AppData\Local\Temp\export-schmutz-approved.py is the generator. WARNING rerunning overwrites manual additions/manifest/gallery and archive, so inspect first.
+
+PENDING WEBSITE PATCH AND OVERVIEW
+C:\Users\info\AppData\Local\Temp\schmutz-website-logo-update\public
+C:\Users\info\AppData\Local\Temp\schmutz-website-logo-update.zip
+Contains index.html, styles.css, app.js, studio.html, site.webmanifest, brand/index.html redirect, brand/approved/ exports, and brand/brand-overview.webp. README has source checksum notes. Patch is not guaranteed to include latest Frame18 additions copied into brand/approved, so sync against the completed export directory. Preserve and reconcile newer actual A: edits.
+Latest overview:
+C:\Users\info\AppData\Local\Temp\schmutz-website-logo-update\public\brand\brand-overview.webp
+Also copied to schmutz-approved-exports\brand-overview.webp.
+1800x2100 lossless WebP. Original overview composition, palette, and typography kept; top changed to approved Frame2 wordmark, bottom tiles approved Frame7 monogram on paper, Frame4 on rust, Frame12 asterisk on ice. Original A:\Schmutz\public\brand\brand-overview.png still exists because A writes were blocked. Do not claim it has been replaced. Move active overview references to .webp.
+
+TEMP PREVIEW
+http://127.0.0.1:4173
+C:\Users\info\AppData\Local\Temp\schmutz-approved-preview.mjs
+Node server overlays temporary public directory over A:\Schmutz\public with fallback. Thus visible changes are not proof A source was updated. Last running exec session45211, may no longer exist in new session. Once patch is actually applied, stop the overlay and run preview from A source directly. Respect running processes and verify PID/command before stopping.
+
+EXACT APPROVED WEBSITE BRANDING
+Top-left logo always Frame2 (paper wordmark and orange TM), desktop/mobile. Footer also Frame2. Large homepage logo now Frame14 (orange wordmark with light TM), not Frame15. User changed this to avoid competing asterisks with headline symbol. Do not change approved artwork, proportions, tracking, TM placement or asterisk. Do not replace it with a six-point star. Original branding was compressed Georgia Bold Italic and Arial supporting text, but approved outlined assets take precedence. No font substitution/redesign.
+Palette: Ink #111110, Paper #EEEAE2, Rust #FA633A. Existing secondary colors in overview Acid#CFDE40 Lilac#D4B8D1 Ice#BED4EF retained.
+Only horizontal/vertical arrows, no diagonals, including product hover animations. Product arrows point right with horizontal translation, never rotate45deg. Shop below uses down; back-to-shop footer uses up. Decorative bottom-left arrow beside THE DIRT ON SCHMUTZ removed because no destination.
+Orange about section: headline Paper; supporting paragraphs, THE DIRT ON SCHMUTZ label, and Find your starting point link Ink. 100% Schmutz stamp text Paper, circle outline Ink. User explicitly corrected earlier overbroad light-color change.
+
+COPY CHANGES IN TEMP PATCH
+For people with good bad taste -> Original templates. Make them yours.
+GOOD BONES. BAD HABITS. -> CANVA. ADOBE EXPRESS. FIGMA.
+Less blank canvas. More happy accidents. -> Original designs. Ready for your ideas.
+About supporting paragraph -> Customize the text, colors, images, and layout to fit your project. Each design will be available for Canva, Adobe Express, and Figma.
+Keep A LITTLE ROUGH AROUND THE EDGES. User disliked negative, meaningless copy that undermines confidence. Main headline still Good design. A little dirty. Do not invent more taglines without direction.
+
+PRODUCT REQUIREMENTS
+Original customizable designs; no client-specific customization service. Every design available for Canva, Adobe Express, Figma. Categories Pitch decks, Motion, Canva, Figma, Adobe Express, no Photoshop/Illustrator labels. Two purchase options personal and commercial licenses. Etsy and Gumroad checkout/delivery supported, separate links per license. Catalog currently six sample concepts, not purchasable; do not fabricate real products/links/prices or claim launch. Catalog studio is localStorage draft plus JSON export, not server CMS. Hero-bottom redundant supporting row removed at user's request. Keep FAQ details already in patch.
+
+GITHUB / DOMAIN UNFINISHED
+User owns schmutz.pro, Squarespace DNS. User requested GitHub repo and domain connection.
+Public repo created https://github.com/thebalddudeco/schmutz , only initialized README at last check; not website deployment. Original local .git remained on E:\THE BALD DUDE CO\NEW WEBSITE\files\schmutz after manual move, while A root had no .git. Inspect state before repairing; do not delete history. Existing original commits7d2e905,1abbf29,7dcbde2.
+GitHub connector writes were blocked by approval-policy never. Browser GitHub upload explicitly denied by user/tool review: do not retry or route around that denial via other methods without valid new authorization/tool permissions. Local gh auth invalid. No successful push/deploy. No DNS changes. Squarespace read-only inspection showed no custom records. Do not point domain to empty hosting. Use official deployment docs if resuming, keep existing email records, verify new host and authorization. Domain task is background unfinished work; apply approved assets first.
+
+WORK STYLE
+No emojis or em dashes. Concise, direct. User frustrated by repeated temporary work claimed as project updates. State exactly what changed on disk and verify. Do not ask repeated permissions when already authorized and supported by tools. Do not promise that opening a new chat automatically grants write access; verify actual session roots. No subagents unless explicitly requested or required by applicable instructions.
+
+FIRST ACTIONS
+1. Confirm cwd A:\Schmutz and actual write permission under new session policy. If still restricted, explain actual restriction and do not create another misleading temporary-only project update.
+2. Inspect A source and applicable instructions, compare current files against patch; preserve user changes.
+3. Apply complete brand folder migration, pending UI/copy adjustments, overview and references to A, finish missing patterns/social as approved-symbol derivatives.
+4. Run node check/build and inspect actual-source preview on desktop/mobile. Check broken paths, palette, TM, arrows, no obsolete symbols or generated PNG/JPEG assets. Report concrete results and remaining GitHub/domain work.

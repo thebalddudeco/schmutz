@@ -43,7 +43,7 @@ function render() {
   visible.forEach(p => {
     const card = el('article','product'), button = el('button','product-open');button.setAttribute('aria-label',`Preview ${p.name}`);
     const art = el('div','art-wrap'), img = el('img');img.src=validImage(p.image)?p.image:'assets/favicon.svg';img.alt=p.name+' template artwork';img.loading='lazy';img.width=900;img.height=650;
-    art.append(img, el('span','art-arrow','↗'));if(p.sample) art.append(el('span','sample','SAMPLE CONCEPT'));
+    art.append(img, el('span','art-arrow','→'));if(p.sample) art.append(el('span','sample','SAMPLE CONCEPT'));
     const info=el('div','product-info'), title=el('div');title.append(el('h3','',p.name),el('p','',`${p.category} / ${p.format}`));info.append(title,el('span','price',p.sample?'COMING SOON':(p.personalPrice ? `PERSONAL ${p.personalPrice}` : (p.price || 'VIEW LICENSES'))));button.append(art,info);button.addEventListener('click',()=>openProduct(p));card.append(button);grid.append(card);
   });
   document.querySelector('#empty').hidden = visible.length > 0;
