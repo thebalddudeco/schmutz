@@ -74,6 +74,16 @@
     "symbols": {
       "family": "Schmutz Symbols",
       "file": "fonts/SchmutzSymbols-Regular.woff"
+    },
+    "logo": {
+      "family": "Georgia",
+      "style": "italic",
+      "weight": 900,
+      "letterSpacing": "-0.09em",
+      "trademark": {
+        "family": "Arial",
+        "placement": "upper right"
+      }
     }
   },
   "spacing": [

@@ -11,10 +11,8 @@ SchmutzSymbols-Regular.ttf: install in your operating system or import into a su
 SchmutzSymbols-Regular.woff: web font. See font-package.css.
 Private-use character map: E001 speck, E002 northeast arrow, E003 southeast arrow, E004 plus, E005 minus, E006 close, E007 check, E008 diamond.
 
-OPTIONAL OPEN-SOURCE TEXT FONT PACKAGE / NOT YET DOWNLOADED
-Fraunces: https://github.com/google/fonts/tree/main/ofl/fraunces
-Manrope: https://github.com/google/fonts/tree/main/ofl/manrope
-Each source directory supplies its OFL.txt license. Download and keep that license with its font files. These are possible future alternatives, not the typefaces used by the current wordmark. The text font files are not included in this kit.
+APPROVED TYPOGRAPHY ONLY
+No replacement text typefaces are specified. Keep the approved Georgia and Arial typography.
 
 CANVA / ADOBE EXPRESS / FIGMA
 Import the supplied outlined SVG marks to preserve their shape. Use transparent PNG when SVG import is unavailable. Font upload and brand-kit support vary by platform and plan. If the exact typeface is unavailable, upload a separately licensed font or use the supplied outlined logo; do not rebuild the logo in a substitute font.

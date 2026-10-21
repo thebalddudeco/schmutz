@@ -21,7 +21,7 @@ SERIF=FONTDIR/'georgia.ttf'; ITALIC=FONTDIR/'georgiai.ttf'; SANS=FONTDIR/'arial.
 def svg(w,h,body,title='Schmutz brand asset'):
  return f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img"><title>{title}</title>{body}</svg>'
 
-def outline(text,fontpath=LOGO_FONT,spacing=-65):
+def outline(text,fontpath=LOGO_FONT,spacing=-184.32):
  font=TTFont(fontpath); gs=font.getGlyphSet(); cmap=font.getBestCmap(); pen=SVGPathPen(gs); bounds=BoundsPen(gs); x=0
  for char in text:
   name=cmap[ord(char)]; trans=(1,0,0,1,x,0)
@@ -37,17 +37,20 @@ def fit_path(d,bounds,x,y,w,h,color):
 
 def speck_points(cx,cy,r):
  result=[]
- for n in range(12):
-  angle=math.radians(-83+n*30);radius=r*([1,.35,.92,.39,1,.36,.96,.4,.9,.34,1,.38][n])
+ for n in range(16):
+  angle=math.radians(-90+n*22.5);radius=r if n%2==0 else r*.35
   result.append((cx+math.cos(angle)*radius,cy+math.sin(angle)*radius))
  return result
 
 def speck(cx,cy,r,color):
- points=' '.join(f'{x:.2f},{y:.2f}' for x,y in speck_points(cx,cy,r))
- return f'<polygon points="{points}" fill="{color}"/>'
+ # The original eight-spoked asterisk, kept as a separate accent.
+ d,b=outline(chr(0x2733),FONTDIR/'seguisym.ttf',spacing=0)
+ return fit_path(d,b,cx-r,cy-r,r*2,r*2,color)
 
 def logo_svg(color=INK,secondary=False):
- body=fit_path(WORD,WB,40,35,1010,245,color)+speck(1130,90,45,color)
+ body=fit_path(WORD,WB,20,35,1130,245,color)
+ tm,tb=outline(chr(0x2122),SANS,spacing=0)
+ body+=fit_path(tm,tb,1160,60,19,19,color)
  if secondary:
   d,b=outline('DESIGN RESOURCES / SCHMUTZ.PRO',SANS,spacing=150)
   body+=fit_path(d,b,170,319,860,30,color)
@@ -62,11 +65,11 @@ def word_png(width=2400,color=INK,secondary=False):
  ratio=(390 if secondary else 320)/1200; im=Image.new('RGBA',(width,round(width*ratio)));d=ImageDraw.Draw(im)
  font=ImageFont.truetype(str(LOGO_FONT),round(width*.25)); raw=Image.new('L',(width*2,width),'black');rd=ImageDraw.Draw(raw);x=20;baseline=round(width*.32)
  for c in 'schmutz':
-  rd.text((x,baseline),c,font=font,anchor='ls',fill=255);x+=font.getlength(c)-65/2048*font.size
- box=raw.getbbox();raw=raw.crop(box);target=(round(width*1010/1200),round(width*245/1200));raw.thumbnail(target,Image.Resampling.LANCZOS)
- px=round(width*40/1200)+(target[0]-raw.width)//2;py=round(width*35/1200)+(target[1]-raw.height)//2
+  rd.text((x,baseline),c,font=font,anchor='ls',fill=255);x+=font.getlength(c)-.09*font.size
+ box=raw.getbbox();raw=raw.crop(box);target=(round(width*1130/1200),round(width*245/1200));raw.thumbnail(target,Image.Resampling.LANCZOS)
+ px=round(width*20/1200)+(target[0]-raw.width)//2;py=round(width*35/1200)+(target[1]-raw.height)//2
  im.paste(Image.new('RGBA',raw.size,color),(px,py),raw)
- d.polygon([(x*width/1200,y*width/1200) for x,y in speck_points(1130,90,45)],fill=color)
+ d.text((round(width*1160/1200),round(width*50/1200)),chr(0x2122),font=ImageFont.truetype(str(SANS),max(12,round(width*25/1200))),fill=color)
  if secondary:
   f=ImageFont.truetype(str(SANS),round(width*.025));label='DESIGN RESOURCES / SCHMUTZ.PRO';d.text((width/2,width*334/1200),label,font=f,fill=color,anchor='mm',stroke_width=0)
  return im
@@ -76,7 +79,7 @@ def mono_png(size=512,color=INK,bg=None):
  if bg:d.rounded_rectangle((0,0,n,n),radius=140,fill=bg)
  mask=Image.new('L',(n,n));md=ImageDraw.Draw(mask);font=ImageFont.truetype(str(LOGO_FONT),700);md.text((200,770),'s',font=font,fill=255,anchor='ls');mask=mask.crop(mask.getbbox());mask.thumbnail((540,720),Image.Resampling.LANCZOS)
  im.paste(Image.new('RGBA',mask.size,color),(round(212+(540-mask.width)/2),round(160+(720-mask.height)/2)),mask)
- d.polygon([(x*2,y*2) for x,y in speck_points(395,120,42)],fill=color)
+ d.text((710,145),chr(0x2733),font=ImageFont.truetype(str(FONTDIR/'seguisym.ttf'),170),fill=color)
  return im.resize((size,size),Image.Resampling.LANCZOS)
 
 for name,color in [('ink',INK),('paper',PAPER),('rust',ORANGE)]:
@@ -86,7 +89,7 @@ for name,color in [('ink',INK),('paper',PAPER),('rust',ORANGE)]:
  (B/'logos'/f'schmutz-monogram-{name}.svg').write_text(mono_svg(color),encoding='utf-8')
  mono_png(1024,color).save(B/'logos'/f'schmutz-monogram-{name}.png')
  (B/'logos'/f'schmutz-speck-{name}.svg').write_text(svg(128,128,speck(64,64,58,color),'Schmutz speck'),encoding='utf-8')
- im=Image.new('RGBA',(512,512));ImageDraw.Draw(im).polygon(speck_points(256,256,232),fill=color);im.save(B/'logos'/f'schmutz-speck-{name}.png')
+ im=Image.new('RGBA',(512,512));ImageDraw.Draw(im).text((256,256),chr(0x2733),font=ImageFont.truetype(str(FONTDIR/'seguisym.ttf'),440),fill=color,anchor='mm');im.save(B/'logos'/f'schmutz-speck-{name}.png')
 
 ICON_PATHS={
  'arrow-up-right':'<path d="M5 19 19 5M5 5h14v14"/>',
@@ -134,7 +137,7 @@ pattern='<defs><pattern id="specks" width="160" height="160" patternUnits="userS
 # An original small symbol font. These glyphs are original geometry, not extracted type.
 glyph_names=['.notdef','speck','arrowNE','arrowSE','plus','minus','close','check','diamond']
 polys={
- 'speck':[[(round(x),round(y)) for x,y in speck_points(500,500,440)]],
+ 'speck':[[(round(500+x*math.cos(a)-y*math.sin(a)),round(500+x*math.sin(a)+y*math.cos(a))) for x,y in [(-440,-20),(440,-20),(440,20),(-440,20)]] for a in [0,math.pi/4,math.pi/2,math.pi*3/4]],
  'arrowNE':[[(170,170),(245,170),(715,640),(715,270),(805,270),(805,805),(270,805),(270,715),(640,715),(170,245)]],
  'arrowSE':[[(170,830),(245,830),(715,360),(715,730),(805,730),(805,195),(270,195),(270,285),(640,285),(170,755)]],
  'plus':[[(450,100),(550,100),(550,450),(900,450),(900,550),(550,550),(550,900),(450,900),(450,550),(100,550),(100,450),(450,450)]],
@@ -171,12 +174,8 @@ SchmutzSymbols-Regular.ttf: install in your operating system or import into a su
 SchmutzSymbols-Regular.woff: web font. See font-package.css.
 Private-use character map: E001 speck, E002 northeast arrow, E003 southeast arrow, E004 plus, E005 minus, E006 close, E007 check, E008 diamond.
 
-OPTIONAL OPEN-SOURCE TEXT FONT PACKAGE / NOT YET DOWNLOADED
-Fraunces: https://github.com/google/fonts/tree/main/ofl/fraunces
-Manrope: https://github.com/google/fonts/tree/main/ofl/manrope
-Each source directory supplies its OFL.txt license. Download and keep that license with its font files. These are possible future alternatives, not the typefaces used by the current wordmark. Browser permission prevented downloading and packaging these fonts in this session.
-
-CANVA / ADOBE EXPRESS / FIGMA
+APPROVED TYPOGRAPHY ONLY
+No replacement text typefaces are specified. Keep the approved Georgia and Arial typography.\n\nCANVA / ADOBE EXPRESS / FIGMA
 Import the supplied outlined SVG marks to preserve their shape. Use transparent PNG when SVG import is unavailable. Font upload and brand-kit support vary by platform and plan. If the exact typeface is unavailable, upload a separately licensed font or use the supplied outlined logo; do not rebuild the logo in a substitute font.
 ''',encoding='utf-8')
 
@@ -202,7 +201,7 @@ for i,(n,h) in enumerate(COLORS.items()):
  x=75+i*275;d.rectangle((x,1000,x+260,1210),fill=h);text(x,1232,n,24);text(x,1270,h,19,color='#AAA79F')
 d.rectangle((75,1360,595,1845),fill=PAPER);mark=mono_png(385,INK);board.paste(mark,(140,1400),mark)
 d.rectangle((615,1360,1135,1845),fill=ORANGE);mark=mono_png(385,INK);board.paste(mark,(680,1400),mark)
-d.rectangle((1155,1360,1725,1845),fill='#BED4EF');dd=ImageDraw.Draw(board);dd.polygon(speck_points(1440,1600,155),fill=INK)
+d.rectangle((1155,1360,1725,1845),fill='#BED4EF');dd=ImageDraw.Draw(board);dd.text((1440,1600),chr(0x2733),font=ImageFont.truetype(str(FONTDIR/'seguisym.ttf'),320),fill=INK,anchor='mm')
 text(75,1900,'01 / OUTLINED LOGOS',19);text(615,1900,'02 / MONOGRAMS',19);text(1155,1900,'03 / ORIGINAL ICONS',19)
 d.line((75,1990,1725,1990),fill='#494843',width=2);text(75,2025,'Georgia + Arial / Ink + Paper + Rust / schmutz.pro',20)
 board.save(B/'brand-overview.png')
@@ -218,7 +217,7 @@ Use primary logos at 140 px wide or larger; use the monogram below that. Keep cl
 
 Typography: Georgia Regular and Italic for display, Arial Regular and Bold for supporting text. These are system fonts, not bundled third-party font files. The original Schmutz Symbols TTF/WOFF font is included. TYPE-SETUP.txt explains installation, platform use, and optional open-source text fonts whose download is pending permission.
 
-Logo lettering was converted from the locally installed Georgia Bold Italic into fixed vector artwork with adjusted spacing. The speck geometry and utility icon artwork were created for this kit. This is a typography-based identity, not a newly drawn text typeface. Use the supplied logo master rather than retyping it.
+Logo lettering uses the approved Georgia Bold Italic with -0.09em tracking, fixed outlines, and a superscript trademark. The eight-spoked asterisk is the existing brand accent. Utility icon artwork was created for this kit. This is a typography-based identity, not a newly drawn text typeface. Use the supplied logo master rather than retyping it.
 
 Brand artwork is for Schmutz and its authorized contractors. The public repository is not a grant of trademark rights or a resale license for these brand assets. Product Personal Use and Commercial Use licenses apply separately to the templates you sell.
 '''

@@ -8,6 +8,6 @@ Use primary logos at 140 px wide or larger; use the monogram below that. Keep cl
 
 Typography: Georgia Regular and Italic for display, Arial Regular and Bold for supporting text. These are system fonts, not bundled third-party font files. The original Schmutz Symbols TTF/WOFF font is included. TYPE-SETUP.txt explains installation, platform use, and optional open-source text fonts whose download is pending permission.
 
-Logo lettering was converted from the locally installed Georgia Bold Italic into fixed vector artwork with adjusted spacing. The speck geometry and utility icon artwork were created for this kit. This is a typography-based identity, not a newly drawn text typeface. Use the supplied logo master rather than retyping it.
+Logo lettering uses the approved Georgia Bold Italic with -0.09em tracking, fixed outlines, and a superscript trademark. The eight-spoked asterisk is the existing brand accent. Utility icon artwork was created for this kit. This is a typography-based identity, not a newly drawn text typeface. Use the supplied logo master rather than retyping it.
 
 Brand artwork is for Schmutz and its authorized contractors. The public repository is not a grant of trademark rights or a resale license for these brand assets. Product Personal Use and Commercial Use licenses apply separately to the templates you sell.

@@ -4,5 +4,3 @@
 
 .license-options{display:grid;gap:12px}.license-option{border:1px solid var(--line);padding:18px}.license-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px}.license-heading h3{font-size:17px;font-weight:normal}.license-heading span{font-size:13px}.license-option p{font-size:12px;margin-bottom:12px}.license-option .unavailable{margin:0}.license-note{font-size:11px;margin-top:15px}.license-editor{border:1px solid var(--line);margin:0 0 20px;padding:18px}.license-editor legend{font-family:var(--serif);font-size:22px;padding:0 8px}
 
-/* Fixed outlined brand masters. */
-.logo img{display:block;width:180px;height:auto}.giant-logo{padding:0;line-height:0;margin-top:30px}.giant-logo img{display:block;width:100%;height:auto}.asterisk img{display:block;width:100%;height:auto}.asterisk{width:100px;font-size:0}@media(max-width:900px){.asterisk{width:75px}}@media(max-width:600px){.logo img{width:125px}.asterisk{width:43px}.giant-logo{padding:0;margin-top:34px}}
