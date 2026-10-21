@@ -1,0 +1,470 @@
+{
+  "version": "2.0-approved",
+  "source_directory": "A:\\Schmutz\\public\\brand\\NEW ASSETS",
+  "formats": [
+    "svg",
+    "webp",
+    "ico"
+  ],
+  "sources": [
+    {
+      "source": "Frame 1.svg",
+      "name": "monogram-paper-rust",
+      "sha256": "1e315c82e0371432c3426c326d401a236ccd39ad48aa5748c15a2b83eed2a78f",
+      "original_canvas_svg": "logos/original-canvas/schmutz-monogram-paper-rust.svg",
+      "original_viewbox": "0 0 924 924",
+      "artwork_bounds": [
+        238.0,
+        172.158,
+        833.065,
+        695.0
+      ],
+      "tight_viewbox": [
+        206.62948,
+        140.78748,
+        657.80604,
+        585.58304
+      ],
+      "webp_widths": [
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    {
+      "source": "Frame 2.svg",
+      "name": "wordmark-paper-rust-tm",
+      "sha256": "3a61a3c4a68a65f09e6042f0a8c241b6b32a24cd2071705f044300a0445d931a",
+      "original_canvas_svg": "logos/original-canvas/schmutz-wordmark-paper-rust-tm.svg",
+      "original_viewbox": "0 0 2772 924",
+      "artwork_bounds": [
+        486.0,
+        218.0,
+        2399.0,
+        582.0
+      ],
+      "tight_viewbox": [
+        464.16,
+        196.16,
+        1956.68,
+        407.68
+      ],
+      "webp_widths": [
+        320,
+        640,
+        1280,
+        2560
+      ]
+    },
+    {
+      "source": "Frame 3.svg",
+      "name": "wordmark-paper-rust-asterisk",
+      "sha256": "cbf328aa4ce8d30f0ca0ec73cc17ffd12ade2250b60fb3a897c33a008f96b1a7",
+      "original_canvas_svg": "logos/original-canvas/schmutz-wordmark-paper-rust-asterisk.svg",
+      "original_viewbox": "0 0 2772 924",
+      "artwork_bounds": [
+        486.0,
+        218.0,
+        2442.07,
+        582.0
+      ],
+      "tight_viewbox": [
+        464.16,
+        196.16,
+        1999.7500000000002,
+        407.68
+      ],
+      "webp_widths": [
+        320,
+        640,
+        1280,
+        2560
+      ]
+    },
+    {
+      "source": "Frame 4.svg",
+      "name": "monogram-paper",
+      "sha256": "a97642102959983d0dd27015e1429d0935be5056d2fd540d638e3968fb7bde67",
+      "original_canvas_svg": "logos/original-canvas/schmutz-monogram-paper.svg",
+      "original_viewbox": "0 0 924 924",
+      "artwork_bounds": [
+        238.0,
+        172.158,
+        833.065,
+        695.0
+      ],
+      "tight_viewbox": [
+        206.62948,
+        140.78748,
+        657.80604,
+        585.58304
+      ],
+      "webp_widths": [
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    {
+      "source": "Frame 5.svg",
+      "name": "wordmark-paper-tm",
+      "sha256": "d05632bee070fa8ba48f3da87f0aa9445e6b30efe6e7c62851f89f1ef29f3498",
+      "original_canvas_svg": "logos/original-canvas/schmutz-wordmark-paper-tm.svg",
+      "original_viewbox": "0 0 2772 924",
+      "artwork_bounds": [
+        486.0,
+        218.0,
+        2399.0,
+        582.0
+      ],
+      "tight_viewbox": [
+        464.16,
+        196.16,
+        1956.68,
+        407.68
+      ],
+      "webp_widths": [
+        320,
+        640,
+        1280,
+        2560
+      ]
+    },
+    {
+      "source": "Frame 6.svg",
+      "name": "wordmark-paper-asterisk",
+      "sha256": "608036648bf7fa5a1e810e4bf73a822fd0685b5c3b6c67e61750fddd70d22b90",
+      "original_canvas_svg": "logos/original-canvas/schmutz-wordmark-paper-asterisk.svg",
+      "original_viewbox": "0 0 2772 924",
+      "artwork_bounds": [
+        486.0,
+        218.0,
+        2442.07,
+        582.0
+      ],
+      "tight_viewbox": [
+        464.16,
+        196.16,
+        1999.7500000000002,
+        407.68
+      ],
+      "webp_widths": [
+        320,
+        640,
+        1280,
+        2560
+      ]
+    },
+    {
+      "source": "Frame 7.svg",
+      "name": "monogram-ink-rust",
+      "sha256": "79a2d0793e196bc345886746b960686a1332b8da03dd9635760365d931603ddb",
+      "original_canvas_svg": "logos/original-canvas/schmutz-monogram-ink-rust.svg",
+      "original_viewbox": "0 0 924 924",
+      "artwork_bounds": [
+        238.0,
+        172.158,
+        833.065,
+        695.0
+      ],
+      "tight_viewbox": [
+        206.62948,
+        140.78748,
+        657.80604,
+        585.58304
+      ],
+      "webp_widths": [
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    {
+      "source": "Frame 8.svg",
+      "name": "wordmark-ink-rust-tm",
+      "sha256": "34a0dc1ec14c27176abf82486856de1027f7abb6b6bc4ca55e390a8b8367b8b1",
+      "original_canvas_svg": "logos/original-canvas/schmutz-wordmark-ink-rust-tm.svg",
+      "original_viewbox": "0 0 2772 924",
+      "artwork_bounds": [
+        486.0,
+        218.0,
+        2399.0,
+        582.0
+      ],
+      "tight_viewbox": [
+        464.16,
+        196.16,
+        1956.68,
+        407.68
+      ],
+      "webp_widths": [
+        320,
+        640,
+        1280,
+        2560
+      ]
+    },
+    {
+      "source": "Frame 9.svg",
+      "name": "wordmark-ink-rust-asterisk",
+      "sha256": "adc192b3633594eaa82c3b0fdc6c3bb8d8b2169356ac8c8e1c2413eb29d3495e",
+      "original_canvas_svg": "logos/original-canvas/schmutz-wordmark-ink-rust-asterisk.svg",
+      "original_viewbox": "0 0 2772 924",
+      "artwork_bounds": [
+        486.0,
+        218.0,
+        2442.07,
+        582.0
+      ],
+      "tight_viewbox": [
+        464.16,
+        196.16,
+        1999.7500000000002,
+        407.68
+      ],
+      "webp_widths": [
+        320,
+        640,
+        1280,
+        2560
+      ]
+    },
+    {
+      "source": "Frame 10.svg",
+      "name": "asterisk-paper-01",
+      "sha256": "5be42d819e048128037287943a653b6706f113b66b257cf73ffb3b321c35da92",
+      "original_canvas_svg": "logos/original-canvas/schmutz-asterisk-paper-01.svg",
+      "original_viewbox": "0 0 924 924",
+      "artwork_bounds": [
+        92.0362,
+        91.9044,
+        832.095,
+        831.964
+      ],
+      "tight_viewbox": [
+        47.63262399999999,
+        47.500823999999994,
+        828.865952,
+        828.866752
+      ],
+      "webp_widths": [
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    {
+      "source": "Frame 11.svg",
+      "name": "asterisk-paper-02",
+      "sha256": "13ae10973f5cd5c3ac142d51ce5e59e30e9127d474e8bd3d7b86759bea29df75",
+      "original_canvas_svg": "logos/original-canvas/schmutz-asterisk-paper-02.svg",
+      "original_viewbox": "0 0 924 924",
+      "artwork_bounds": [
+        92.0362,
+        91.9045,
+        832.095,
+        831.964
+      ],
+      "tight_viewbox": [
+        47.63262999999999,
+        47.50093,
+        828.86594,
+        828.8666400000001
+      ],
+      "webp_widths": [
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    {
+      "source": "Frame 12.svg",
+      "name": "asterisk-ink",
+      "sha256": "1b45531daa724197ca69a446ae63cfd356b271585bfb6baba02f0e4d8003405e",
+      "original_canvas_svg": "logos/original-canvas/schmutz-asterisk-ink.svg",
+      "original_viewbox": "0 0 924 924",
+      "artwork_bounds": [
+        92.0362,
+        91.9045,
+        832.095,
+        831.964
+      ],
+      "tight_viewbox": [
+        47.63262999999999,
+        47.50093,
+        828.86594,
+        828.8666400000001
+      ],
+      "webp_widths": [
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    {
+      "source": "Frame 13.svg",
+      "name": "monogram-rust-paper",
+      "sha256": "472a3904a94eb570e7abd82a7e62c77e6ab96c91475c016658ac1ec08e7ad6d1",
+      "original_canvas_svg": "logos/original-canvas/schmutz-monogram-rust-paper.svg",
+      "original_viewbox": "0 0 924 924",
+      "artwork_bounds": [
+        238.0,
+        172.158,
+        833.065,
+        695.0
+      ],
+      "tight_viewbox": [
+        206.62948,
+        140.78748,
+        657.80604,
+        585.58304
+      ],
+      "webp_widths": [
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    {
+      "source": "Frame 14.svg",
+      "name": "wordmark-rust-white-tm",
+      "sha256": "ed9a325857acf333c8adf38b37a20471ab6643994d25fa7929a47def58b2a751",
+      "original_canvas_svg": "logos/original-canvas/schmutz-wordmark-rust-white-tm.svg",
+      "original_viewbox": "0 0 2772 924",
+      "artwork_bounds": [
+        486.0,
+        218.0,
+        2399.0,
+        582.0
+      ],
+      "tight_viewbox": [
+        464.16,
+        196.16,
+        1956.68,
+        407.68
+      ],
+      "webp_widths": [
+        320,
+        640,
+        1280,
+        2560
+      ]
+    },
+    {
+      "source": "Frame 15.svg",
+      "name": "wordmark-rust-paper-asterisk",
+      "sha256": "9a6520bd77ec6aa2ba8bb5f122e4bd8898c01ce86cacb546a9ab5f3c6f5f2c99",
+      "original_canvas_svg": "logos/original-canvas/schmutz-wordmark-rust-paper-asterisk.svg",
+      "original_viewbox": "0 0 2772 924",
+      "artwork_bounds": [
+        486.0,
+        218.0,
+        2442.07,
+        582.0
+      ],
+      "tight_viewbox": [
+        464.16,
+        196.16,
+        1999.7500000000002,
+        407.68
+      ],
+      "webp_widths": [
+        320,
+        640,
+        1280,
+        2560
+      ]
+    },
+    {
+      "source": "Frame 16.svg",
+      "name": "asterisk-rust",
+      "sha256": "88e52591f71316af0a89f8115fc31586e16c410e3a1d37d492908d9e34d12585",
+      "original_canvas_svg": "logos/original-canvas/schmutz-asterisk-rust.svg",
+      "original_viewbox": "0 0 924 924",
+      "artwork_bounds": [
+        92.0362,
+        91.9045,
+        832.095,
+        831.964
+      ],
+      "tight_viewbox": [
+        47.63262999999999,
+        47.50093,
+        828.86594,
+        828.8666400000001
+      ],
+      "webp_widths": [
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    }
+  ],
+  "wordmark_widths": [
+    320,
+    640,
+    1280,
+    2560
+  ],
+  "square_sizes": [
+    64,
+    128,
+    256,
+    512,
+    1024
+  ],
+  "favicon_sizes": [
+    16,
+    24,
+    32,
+    48,
+    64,
+    128,
+    180,
+    192,
+    256,
+    512
+  ],
+  "notes": [
+    "Approved path geometry, internal spacing, trademark, asterisk, and colors are preserved.",
+    "Original-canvas SVGs are byte-for-byte copies of supplied masters.",
+    "Tight SVGs adjust only the outer viewBox, with 6 percent of artwork height as clear space.",
+    "Icon tiles add only an approved Ink, Paper, or Rust background; artwork is unchanged.",
+    "ICO files use BMP frames internally. No PNG or JPEG exports are included."
+  ],
+  "additional_master": {
+    "source": "Frame 17.svg",
+    "file": "sources/schmutz-live-text-master-frame17.svg",
+    "note": "Retained as supplied. This SVG contains outlined paths rather than editable SVG text nodes."
+  },
+  "raster_only_sources": [
+    {
+      "source": "Frame 18.png",
+      "sha256": "6c307254da708bd6db0a7228da319da79fb2dba95cea1a87b233777dece09dbb",
+      "exports": "logos/webp/schmutz-wordmark-paper-rust-asterisk-on-ink-frame18-*.webp",
+      "widths": [
+        320,
+        640,
+        1280,
+        2772
+      ],
+      "note": "Lossless WebP; no vector tracing or upscaling."
+    }
+  ]
+}

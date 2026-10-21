@@ -1,0 +1,4 @@
+/* Brand typography uses system-installed fonts. No third-party font binaries are included. */
+:root { --schmutz-display: Georgia, "Times New Roman", serif; --schmutz-body: Arial, Helvetica, sans-serif; }
+@font-face { font-family: "Schmutz Symbols"; src: url("SchmutzSymbols-Regular.woff") format("woff"), url("SchmutzSymbols-Regular.ttf") format("truetype"); font-style: normal; font-weight: 400; font-display: block; }
+.schmutz-symbol { font-family: "Schmutz Symbols"; font-style: normal; font-weight: 400; }
