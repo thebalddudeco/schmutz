@@ -14,7 +14,7 @@ The studio is a local editing utility. It does not upload to a server or commit 
 
 ## GitHub deployment
 
-Create or use a GitHub repository. Push this project to its `main` branch. In Settings > Pages, set Source to GitHub Actions. The included workflow validates, builds, and deploys the site. In Pages settings, set Custom domain to `schmutz.pro`, verify the domain, and enable HTTPS after GitHub provisions the certificate. Existing DNS has not been inspected or changed. The public/CNAME file declares schmutz.pro. The GitHub repository is https://github.com/thebalddudeco/schmutz. Publishing and DNS changes are pending upload access.
+The site is published from the `gh-pages` branch of https://github.com/thebalddudeco/schmutz. GitHub Pages uses the generated static files at the branch root; `public/CNAME` keeps the custom domain set to `schmutz.pro`. The domain's apex A and AAAA records point to GitHub Pages, and `www` is a CNAME to `thebalddudeco.github.io`. GitHub's certificate provisioning and HTTPS enforcement are the final launch checks. To publish a future update, run `npm run check` and `npm run build`, then publish the contents of `dist/` to `gh-pages` (including `CNAME`).
 
 ## Design
 
@@ -34,4 +34,4 @@ Do not run the legacy `scripts/brand-kit.py`: it generates superseded artwork. T
 
 Canonical project folder: `A:\Schmutz`. Git history is restored here. The approved website patch and latest exports, including Frame 18, are applied. `_migration/2026-10-21-before-consolidation/` preserves the earlier site and build. `_migration/previous-chat/` preserves the previous temporary exports, generators, ZIPs, and handoff. These local archives are excluded from Git and the website build.
 
-Remaining work: pattern replacements and additional social layouts were not completed in the earlier chat; the original patterns are preserved. GitHub publishing, domain connection, and real product listings are still pending. Consolidating local files does not publish the website.
+Remaining work: pattern replacements and additional social layouts were not completed in the earlier chat; the original patterns are preserved. The site and DNS are connected; GitHub certificate provisioning and HTTPS enforcement are being verified. Real product listings still need to replace the sample concepts. Consolidating local files does not publish the website.
