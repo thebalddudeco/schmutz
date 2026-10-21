@@ -1,0 +1,20 @@
+SCHMUTZ TYPOGRAPHY / V1
+
+CURRENT IDENTITY
+Georgia Regular and Italic: editorial headings.
+Arial Regular and Bold: navigation, body, utility labels.
+Primary logo: supplied as fixed outlines; never retype it.
+These fonts are used from existing system installations. Their binary font files are not included or licensed by this package. SVG and PNG logo assets do not require the fonts.
+
+ORIGINAL SYMBOL FONT INCLUDED
+SchmutzSymbols-Regular.ttf: install in your operating system or import into a supported design tool.
+SchmutzSymbols-Regular.woff: web font. See font-package.css.
+Private-use character map: E001 speck, E002 northeast arrow, E003 southeast arrow, E004 plus, E005 minus, E006 close, E007 check, E008 diamond.
+
+OPTIONAL OPEN-SOURCE TEXT FONT PACKAGE / NOT YET DOWNLOADED
+Fraunces: https://github.com/google/fonts/tree/main/ofl/fraunces
+Manrope: https://github.com/google/fonts/tree/main/ofl/manrope
+Each source directory supplies its OFL.txt license. Download and keep that license with its font files. These are possible future alternatives, not the typefaces used by the current wordmark. The text font files are not included in this kit.
+
+CANVA / ADOBE EXPRESS / FIGMA
+Import the supplied outlined SVG marks to preserve their shape. Use transparent PNG when SVG import is unavailable. Font upload and brand-kit support vary by platform and plan. If the exact typeface is unavailable, upload a separately licensed font or use the supplied outlined logo; do not rebuild the logo in a substitute font.

@@ -1,0 +1,104 @@
+{
+  "brand": "Schmutz",
+  "version": "1.0",
+  "colors": {
+    "ink": {
+      "hex": "#111110",
+      "rgb": [
+        17,
+        17,
+        16
+      ]
+    },
+    "paper": {
+      "hex": "#EEEAE2",
+      "rgb": [
+        238,
+        234,
+        226
+      ]
+    },
+    "rust": {
+      "hex": "#FA633A",
+      "rgb": [
+        250,
+        99,
+        58
+      ]
+    },
+    "acid": {
+      "hex": "#CFDE40",
+      "rgb": [
+        207,
+        222,
+        64
+      ]
+    },
+    "lilac": {
+      "hex": "#D4B8D1",
+      "rgb": [
+        212,
+        184,
+        209
+      ]
+    },
+    "ice": {
+      "hex": "#BED4EF",
+      "rgb": [
+        190,
+        212,
+        239
+      ]
+    }
+  },
+  "type": {
+    "display": {
+      "family": "Georgia",
+      "fallback": "Times New Roman, serif",
+      "weights": [
+        400
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ]
+    },
+    "body": {
+      "family": "Arial",
+      "fallback": "Helvetica, sans-serif",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "symbols": {
+      "family": "Schmutz Symbols",
+      "file": "fonts/SchmutzSymbols-Regular.woff"
+    }
+  },
+  "spacing": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64,
+    96
+  ],
+  "radii": {
+    "ui": 0,
+    "avatar": 70
+  },
+  "icon": {
+    "grid": 24,
+    "stroke": 1.6,
+    "cap": "square",
+    "join": "miter"
+  },
+  "logos": {
+    "minWidthDigital": 140,
+    "clearSpace": "Half the height of the lowercase s on all sides"
+  }
+}
