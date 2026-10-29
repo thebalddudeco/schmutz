@@ -1,5 +1,20 @@
 [
   {
+    "id": "launching-soon",
+    "name": "Launching Soon Reel",
+    "category": "Instagram Reels",
+    "format": "Canva · 9:16 Reel",
+    "description": "A phone-frame Coming Soon announcement with elegant serif type and a warm soft-focus backdrop. Edit your launch date, website, message and branding in Canva.",
+    "image": "assets/products/launching-soon.webp",
+    "etsyUrl": "https://www.etsy.com/listing/4605806135",
+    "gumroadUrl": "https://theschmutz.gumroad.com/l/schmutz-launching-soon",
+    "gumroadCheckoutUrl": "https://gumroad.com/checkout?product=xxaxqg&quantity=1",
+    "price": "$4.99",
+    "personalPrice": "$4.99",
+    "licenseMode": "single",
+    "sample": false
+  },
+  {
     "id": "habit-tips",
     "name": "Habit Tips Carousel",
     "category": "Instagram Carousels",
