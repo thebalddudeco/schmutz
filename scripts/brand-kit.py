@@ -196,7 +196,7 @@ def text(x,y,s,size=25,color=PAPER,font=SANS):d.text((x,y),s,font=ImageFont.true
 text(75,60,'SCHMUTZ / IDENTITY SYSTEM',22);text(1460,60,'VOL. 01 / 2026',18)
 brand=word_png(1640,PAPER);board.paste(brand,(60,145),brand)
 d.line((75,620,1725,620),fill='#494843',width=2)
-text(75,670,'Good design.',105,font=SERIF);text(75,790,'A little dirty.',105,font=ITALIC)
+text(75,670,'Put a little schmutz on it.',58,font=SERIF);text(75,790,'Nice. Now give it some character.',44,font=ITALIC)
 for i,(n,h) in enumerate(COLORS.items()):
  x=75+i*275;d.rectangle((x,1000,x+260,1210),fill=h);text(x,1232,n,24);text(x,1270,h,19,color='#AAA79F')
 d.rectangle((75,1360,595,1845),fill=PAPER);mark=mono_png(385,INK);board.paste(mark,(140,1400),mark)
@@ -205,7 +205,7 @@ d.rectangle((1155,1360,1725,1845),fill='#BED4EF');dd=ImageDraw.Draw(board);dd.te
 text(75,1900,'01 / OUTLINED LOGOS',19);text(615,1900,'02 / MONOGRAMS',19);text(1155,1900,'03 / ORIGINAL ICONS',19)
 d.line((75,1990,1725,1990),fill='#494843',width=2);text(75,2025,'Georgia + Arial / Ink + Paper + Rust / schmutz.pro',20)
 board.save(B/'brand-overview.png')
-cover=Image.new('RGB',(1200,630),ORANGE);cd=ImageDraw.Draw(cover);mark=word_png(1100,INK);cover.paste(mark,(50,115),mark);cd.text((65,520),'GOOD DESIGN. A LITTLE DIRTY.',font=ImageFont.truetype(str(SANS),24),fill=INK);cd.text((970,520),'SCHMUTZ.PRO',font=ImageFont.truetype(str(SANS),18),fill=INK);cover.save(B/'social'/'open-graph.png')
+cover=Image.new('RGB',(1200,630),ORANGE);cd=ImageDraw.Draw(cover);mark=word_png(1100,INK);cover.paste(mark,(50,115),mark);cd.text((65,520),'PUT A LITTLE SCHMUTZ ON IT.',font=ImageFont.truetype(str(SANS),24),fill=INK);cd.text((970,520),'SCHMUTZ.PRO',font=ImageFont.truetype(str(SANS),18),fill=INK);cover.save(B/'social'/'open-graph.png')
 
 readme='''# Schmutz Brand System v1
 
