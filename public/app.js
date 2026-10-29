@@ -10,7 +10,7 @@ function openProduct(p) {
   const layout = el('div','dialog-grid'); const img = el('img'); img.src = validImage(p.image) ? p.image : 'assets/favicon.svg'; img.alt = p.name + ' design preview';
   const info = el('div'); info.append(el('span','eyebrow', p.category), el('h2','',p.name), el('p','',p.description),el('div','specs',`Application / format: ${p.format}`));
   const licenses = el('div', 'license-options');
-  const purchaseOptions = p.licenseMode === 'single' ? [['personal', 'Canva template', 'PDF access file and editing instructions delivered through Etsy.']] : [
+  const purchaseOptions = p.licenseMode === 'single' ? [['personal', 'Canva template', 'Editable Canva template access. Choose your preferred store below.']] : [
     ['personal', 'Personal Use', 'For your own personal projects.'],
     ['commercial', 'Commercial Use', 'For business and client projects.']
   ];
@@ -45,7 +45,7 @@ function render() {
     const card = el('article','product'), button = el('button','product-open');button.setAttribute('aria-label',`Preview ${p.name}`);
     const art = el('div','art-wrap'), img = el('img');img.src=validImage(p.image)?p.image:'assets/favicon.svg';img.alt=p.name+' template artwork';img.loading='lazy';img.width=900;img.height=650;
     art.append(img, el('span','art-arrow','→'));if(p.sample) art.append(el('span','sample','SAMPLE CONCEPT'));
-    const info=el('div','product-info'), title=el('div');title.append(el('h3','',p.name),el('p','',`${p.category} / ${p.format}`));info.append(title,el('span','price',p.sample?'COMING SOON':(p.price || p.personalPrice || 'VIEW ON ETSY')));button.append(art,info);button.addEventListener('click',()=>openProduct(p));card.append(button);if(!p.sample){for(const {label,url} of productLinks(p)){const buy=el('a','product-buy',`View on ${label} ↗`);buy.href=url;buy.target='_blank';buy.rel='noopener noreferrer';buy.setAttribute('aria-label',`View ${p.name} on ${label}`);card.append(buy);}}grid.append(card);
+    const info=el('div','product-info'), title=el('div');title.append(el('h3','',p.name),el('p','',`${p.category} / ${p.format}`));info.append(title,el('span','price',p.sample?'COMING SOON':(p.price || p.personalPrice || 'VIEW ON ETSY')));button.append(art,info);button.addEventListener('click',()=>openProduct(p));card.append(button);if(!p.sample){const actions=el('div','product-purchase-links');for(const {label,url} of productLinks(p)){const buy=el('a','product-buy',`Buy on ${label} ↗`);buy.href=url;buy.target='_blank';buy.rel='noopener noreferrer';buy.setAttribute('aria-label',`Buy ${p.name} on ${label}`);actions.append(buy);}card.append(actions);}grid.append(card);
   });
   document.querySelector('#empty').hidden = visible.length > 0;
   document.querySelector('#results-status').textContent=`${visible.length} templates shown`;
@@ -54,4 +54,4 @@ document.querySelectorAll('[data-filter]').forEach(button => button.addEventList
 document.querySelectorAll('.search-toggle').forEach(b=>b.addEventListener('click',()=>{document.querySelector('#search-panel').hidden=false;document.querySelector('#shop').scrollIntoView();search.focus({preventScroll:true});}));
 search.addEventListener('input',render);document.querySelector('#clear-search').addEventListener('click',()=>{search.value='';render();search.focus();});
 document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
-try { const response=await fetch('catalog.json?v=etsy-20261029');if(!response.ok)throw new Error('Catalog unavailable');products=await response.json();if(!Array.isArray(products))throw new Error('Invalid catalog');document.querySelector('[data-filter=all] sup').textContent=String(products.length).padStart(2,'0');document.querySelector('.catalog-note').hidden=false;render(); } catch {grid.textContent='The catalog could not load. Please refresh and try again.';}
+try { const response=await fetch('catalog.json?v=stores-20261029');if(!response.ok)throw new Error('Catalog unavailable');products=await response.json();if(!Array.isArray(products))throw new Error('Invalid catalog');document.querySelector('[data-filter=all] sup').textContent=String(products.length).padStart(2,'0');document.querySelector('.catalog-note').hidden=false;render(); } catch {grid.textContent='The catalog could not load. Please refresh and try again.';}
