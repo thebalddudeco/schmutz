@@ -1,4 +1,4 @@
-import { marketplaceLink, productLinks } from './marketplaces.js';
+import { marketplaceLink, productLinks } from './marketplaces.js?v=stores-20261029';
 const key='schmutz.catalog.v1', categories=['Instagram Reels','Instagram Carousels','Pitch decks','Motion','Canva','Figma','Adobe Express'];
 const form=document.querySelector('#editor'), status=document.querySelector('#status');
 let catalog=[], selected=0, removed=null;

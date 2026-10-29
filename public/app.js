@@ -1,4 +1,4 @@
-import { productLinks } from './marketplaces.js';
+import { productLinks } from './marketplaces.js?v=stores-20261029';
 const grid = document.querySelector('#products');
 const search = document.querySelector('#search');
 const dialog = document.querySelector('#product-dialog');
