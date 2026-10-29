@@ -1,4 +1,4 @@
-import { productLinks } from './marketplaces.js?v=launch-20261029';
+import { productLinks } from './marketplaces.js?v=tagline-alternates-20261029';
 const grid = document.querySelector('#products');
 const search = document.querySelector('#search');
 const dialog = document.querySelector('#product-dialog');
@@ -54,4 +54,4 @@ document.querySelectorAll('[data-filter]').forEach(button => button.addEventList
 document.querySelectorAll('.search-toggle').forEach(b=>b.addEventListener('click',()=>{document.querySelector('#search-panel').hidden=false;document.querySelector('#shop').scrollIntoView();search.focus({preventScroll:true});}));
 search.addEventListener('input',render);document.querySelector('#clear-search').addEventListener('click',()=>{search.value='';render();search.focus();});
 document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
-try { const response=await fetch('catalog.json?v=launch-20261029');if(!response.ok)throw new Error('Catalog unavailable');products=await response.json();if(!Array.isArray(products))throw new Error('Invalid catalog');document.querySelector('[data-filter=all] sup').textContent=String(products.length).padStart(2,'0');document.querySelector('.catalog-note').hidden=false;render(); } catch {grid.textContent='The catalog could not load. Please refresh and try again.';}
+try { const response=await fetch('catalog.json?v=tagline-alternates-20261029');if(!response.ok)throw new Error('Catalog unavailable');products=await response.json();if(!Array.isArray(products))throw new Error('Invalid catalog');document.querySelector('[data-filter=all] sup').textContent=String(products.length).padStart(2,'0');document.querySelector('.catalog-note').hidden=false;render(); } catch {grid.textContent='The catalog could not load. Please refresh and try again.';}
