@@ -13,3 +13,5 @@
 
 /* Preserve the complete Etsy advertisement artwork. */
 .art-wrap{aspect-ratio:4/3;background:#f7f2e9}.art-wrap img{object-fit:contain}.product-buy{display:inline-block;font-size:12px;margin-top:16px;border-bottom:1px solid var(--orange);padding:7px 0;color:var(--paper)}.product-buy:hover{color:var(--orange)}.catalog-note{margin-bottom:28px}
+
+.product-purchase-links{display:flex;flex-wrap:wrap;gap:8px 24px}

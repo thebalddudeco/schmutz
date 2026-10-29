@@ -10,7 +10,9 @@
     "price": "$4.99",
     "personalPrice": "$4.99",
     "licenseMode": "single",
-    "sample": false
+    "sample": false,
+    "gumroadUrl": "https://theschmutz.gumroad.com/l/schmutz-habit-tips",
+    "gumroadCheckoutUrl": "https://gumroad.com/checkout?product=qtukgh&quantity=1"
   },
   {
     "id": "beach-polaroid",
@@ -23,7 +25,9 @@
     "price": "$4.99",
     "personalPrice": "$4.99",
     "licenseMode": "single",
-    "sample": false
+    "sample": false,
+    "gumroadUrl": "https://theschmutz.gumroad.com/l/schmutz-beach-polaroid",
+    "gumroadCheckoutUrl": "https://gumroad.com/checkout?product=fwhwow&quantity=1"
   },
   {
     "id": "love-story",
@@ -36,7 +40,9 @@
     "price": "$4.99",
     "personalPrice": "$4.99",
     "licenseMode": "single",
-    "sample": false
+    "sample": false,
+    "gumroadUrl": "https://theschmutz.gumroad.com/l/schmutz-love-story",
+    "gumroadCheckoutUrl": "https://gumroad.com/checkout?product=pwahsn&quantity=1"
   },
   {
     "id": "modern-fashion",
@@ -49,7 +55,9 @@
     "price": "$4.99",
     "personalPrice": "$4.99",
     "licenseMode": "single",
-    "sample": false
+    "sample": false,
+    "gumroadUrl": "https://theschmutz.gumroad.com/l/schmutz-modern-fashion",
+    "gumroadCheckoutUrl": "https://gumroad.com/checkout?product=dazia&quantity=1"
   },
   {
     "id": "outfit-check",
@@ -62,7 +70,9 @@
     "price": "$4.99",
     "personalPrice": "$4.99",
     "licenseMode": "single",
-    "sample": false
+    "sample": false,
+    "gumroadUrl": "https://theschmutz.gumroad.com/l/schmutz-outfit-check",
+    "gumroadCheckoutUrl": "https://gumroad.com/checkout?product=iyeru&quantity=1"
   },
   {
     "id": "neutral-scrapbook",
@@ -75,7 +85,9 @@
     "price": "$4.99",
     "personalPrice": "$4.99",
     "licenseMode": "single",
-    "sample": false
+    "sample": false,
+    "gumroadUrl": "https://theschmutz.gumroad.com/l/schmutz-neutral-scrapbook",
+    "gumroadCheckoutUrl": "https://gumroad.com/checkout?product=uxojs&quantity=1"
   },
   {
     "id": "nyc-montage",
@@ -88,7 +100,9 @@
     "price": "$4.99",
     "personalPrice": "$4.99",
     "licenseMode": "single",
-    "sample": false
+    "sample": false,
+    "gumroadUrl": "https://theschmutz.gumroad.com/l/schmutz-nyc-montage",
+    "gumroadCheckoutUrl": "https://gumroad.com/checkout?product=ahjrqz&quantity=1"
   },
   {
     "id": "black-architectural",
@@ -101,6 +115,8 @@
     "price": "$4.99",
     "personalPrice": "$4.99",
     "licenseMode": "single",
-    "sample": false
+    "sample": false,
+    "gumroadUrl": "https://theschmutz.gumroad.com/l/schmutz-black-architectural",
+    "gumroadCheckoutUrl": "https://gumroad.com/checkout?product=wdjphq&quantity=1"
   }
 ]
