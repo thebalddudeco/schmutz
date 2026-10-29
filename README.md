@@ -1,6 +1,6 @@
 # Schmutz
 
-Original storefront for schmutz.pro. Static HTML, CSS, and JavaScript with no dependencies. Includes six clearly labeled concept products, responsive layouts, category filtering, search, product previews, and a browser-local catalog editor.
+Original storefront for schmutz.pro. Static HTML, CSS, and JavaScript with no dependencies. Includes eight live Etsy Canva products, responsive layouts, category filtering, search, product previews, and a browser-local catalog editor.
 
 ## Preview
 
@@ -8,7 +8,7 @@ Run `npm run dev`, then open http://127.0.0.1:4173. Run `npm run check` and `npm
 
 ## Add products
 
-Open `/studio.html`. Add a product, upload a cover, fill in the description and software format, and paste its Etsy and/or Gumroad product URLs. Set separate Personal Use and Commercial Use prices and product links. Each license can link to either store or both, and both licenses need at least one link before a product can leave sample mode. Turn off Sample when the real product is available. Save the draft and Export catalog. Replace `public/catalog.json` with the downloaded file and commit it. Images are embedded in the exported catalog. Larger collections should use optimized files in `public/assets` and relative image paths instead.
+Open `/studio.html`. Add a product, upload a cover, fill in the description and software format, and paste its Etsy and/or Gumroad product URLs. The current products use one Etsy purchase option and the terms from their listing. Legacy products may use separate Personal Use and Commercial Use prices and product links. Each license can link to either store or both, and single-purchase products need one link; separate-license products need a link for each license before leaving sample mode. Turn off Sample when the real product is available. Save the draft and Export catalog. Replace `public/catalog.json` with the downloaded file and commit it. Images are embedded in the exported catalog. Larger collections should use optimized files in `public/assets` and relative image paths instead.
 
 The studio is a local editing utility. It does not upload to a server or commit to GitHub. Anyone can open the editor but cannot change the published site without repository access. Unsaved form edits are discarded when switching products; use Save draft first. Template downloads and checkout are handled by Etsy or Gumroad, not this site.
 
@@ -22,7 +22,7 @@ Black and warm white, editorial serif typography, italic accents, oversized word
 
 ## Before launch
 
-Replace sample concepts with actual products and listing links. Confirm software compatibility and license terms on each listing. There is no connected newsletter, checkout backend, hosted upload service, or account system in this version.
+The concept catalog has been replaced with eight Etsy template listings, verified active on October 29, 2026. Confirm software compatibility and license terms on each listing. There is no connected newsletter, checkout backend, hosted upload service, or account system in this version.
 
 ## Brand system
 
