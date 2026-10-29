@@ -196,7 +196,7 @@ def text(x,y,s,size=25,color=PAPER,font=SANS):d.text((x,y),s,font=ImageFont.true
 text(75,60,'SCHMUTZ / IDENTITY SYSTEM',22);text(1460,60,'VOL. 01 / 2026',18)
 brand=word_png(1640,PAPER);board.paste(brand,(60,145),brand)
 d.line((75,620,1725,620),fill='#494843',width=2)
-text(75,670,'Put a little schmutz on it.',58,font=SERIF);text(75,790,'Nice. Now give it some character.',44,font=ITALIC)
+text(75,670,'Put a little schmutz on it.',58,font=SERIF)
 for i,(n,h) in enumerate(COLORS.items()):
  x=75+i*275;d.rectangle((x,1000,x+260,1210),fill=h);text(x,1232,n,24);text(x,1270,h,19,color='#AAA79F')
 d.rectangle((75,1360,595,1845),fill=PAPER);mark=mono_png(385,INK);board.paste(mark,(140,1400),mark)
