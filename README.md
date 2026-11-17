@@ -1,6 +1,6 @@
 # Schmutz
 
-Original storefront for schmutz.pro. Static HTML, CSS, and JavaScript with no dependencies. Includes eight live Etsy Canva products, responsive layouts, category filtering, search, product previews, and a browser-local catalog editor.
+Original storefront for schmutz.pro. Includes ten Etsy Canva products, a searchable Tools directory, responsive layouts, category filtering, product previews, and a browser-local catalog editor. The Tools page lists 58 utilities; subscriptions for the 48 Plus tools are not open yet.
 
 ## Preview
 
@@ -12,6 +12,10 @@ Open `/studio.html`. Add a product, upload a cover, fill in the description and 
 
 The studio is a local editing utility. It does not upload to a server or commit to GitHub. Anyone can open the editor but cannot change the published site without repository access. Unsaved form edits are discarded when switching products; use Save draft first. Template downloads and checkout are handled by Etsy or Gumroad, not this site.
 
+## Tools
+
+The Tools directory is a static website page. Browser-based tools process supported files on the visitor's device. Tools that need an unconnected online service remain unavailable. Schmutz does not run a processing server; Plus billing and account features are still opening soon.
+
 ## GitHub deployment
 
 The site is published from the `gh-pages` branch of https://github.com/thebalddudeco/schmutz. GitHub Pages uses the generated static files at the branch root; `public/CNAME` keeps the custom domain set to `schmutz.pro`. The domain's apex A and AAAA records point to GitHub Pages, and `www` is a CNAME to `thebalddudeco.github.io`. GitHub's certificate provisioning and HTTPS enforcement are the final launch checks. To publish a future update, run `npm run check` and `npm run build`, then publish the contents of `dist/` to `gh-pages` (including `CNAME`).
@@ -22,7 +26,7 @@ Black and warm white, editorial serif typography, italic accents, oversized word
 
 ## Before launch
 
-The concept catalog has been replaced with eight Etsy template listings, verified active on October 29, 2026. Confirm software compatibility and license terms on each listing. There is no connected newsletter, checkout backend, hosted upload service, or account system in this version.
+The concept catalog has been replaced with ten Etsy template listings. Confirm software compatibility and license terms on each listing. There is no connected newsletter, checkout backend, hosted upload service, or account system in this version.
 
 ## Brand system
 
