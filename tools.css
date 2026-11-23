@@ -18,3 +18,6 @@
 :root{--control-radius:12px}
 button,input[type="button"],input[type="submit"],input[type="reset"],a.button,a[class*="button"],a.download,.download[role="button"],.ged-membership-card__buy,.membership-button,[role="button"]{border-radius:var(--control-radius)!important}
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]),textarea,select{border-radius:var(--control-radius)!important}
+
+.tool-course small{color:var(--orange)}
+
