@@ -4,7 +4,8 @@
 .tool-access-filters{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}.tool-access-filters button{padding:12px 18px;border:1px solid var(--line)}.tool-access-filters button[aria-pressed=true]{background:var(--orange);color:var(--ink);border-color:var(--orange)}.tool-paid .tool-arrow{color:var(--muted)}.tool-paid small{color:var(--orange)}.tool-aside .plus-price{font:normal 38px Georgia;margin-bottom:15px}.plus-price span{font:12px Arial}.tool-aside button{display:block;background:var(--ink);color:var(--paper);padding:14px 20px;margin:25px 0 15px}.tool-aside .plus-note{font-size:10px;margin-bottom:30px}.membership-price{padding:24px 0}.membership-price strong{font:normal 55px Georgia}.membership-price strong span{font:16px Arial}.membership-price p{margin-top:15px;line-height:1.8}.membership-price .membership-terms{font-size:12px;color:var(--muted);max-width:650px}.membership-button{margin:10px 10px 10px 0}.tools-page .header #account-button{display:block;padding:10px;font-size:12px}
 
 /* Standalone GED membership tile */
-.tool-card--membership{background:#f3eee4;color:#171714;box-shadow:inset 0 0 0 2px #fa633a}
-.tool-card--membership:hover{background:#fffdf8}
-.tool-card--membership .tool-number,.tool-card--membership .tool-arrow,.tool-card--membership small{color:#a94328}
-.tool-card--membership p{color:#393832}
+.tool-card--membership{background:#171716;color:#eeeae2;box-shadow:inset 0 0 0 2px #fa633a}
+.tool-card--membership:hover{background:#24231f;color:#fffdf8}
+.tool-card--membership h2{color:#eeeae2}
+.tool-card--membership p{color:#b5b1a8}
+.tool-card--membership .tool-number,.tool-card--membership .tool-arrow,.tool-card--membership small{color:#fa633a}
