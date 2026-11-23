@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schmutz Plus Order Helper</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="content" style="max-width:880px;margin:0 auto">
+    <section class="surface">
+      <div class="surface__header">
+        <div><p class="eyebrow">Seller Tool · Schmutz Plus</p><h1>Gumroad order hash helper</h1></div>
+        <p>Generate a hash entry from a buyer email and Gumroad order ID. Only the hash is added to the public purchase list.</p>
+      </div>
+      <form id="order-form" class="stack-list">
+        <label class="field"><span class="label">Buyer label</span><input id="entry-label" type="text" placeholder="order-001"></label>
+        <label class="field"><span class="label">Purchase email</span><input id="buyer-email" type="email" autocomplete="off" required></label>
+        <label class="field"><span class="label">Gumroad order ID</span><input id="order-id" type="text" autocomplete="off" required></label>
+        <div class="button-row"><button class="button button--primary" type="submit">Generate hash entry</button></div>
+      </form>
+    </section>
+    <section class="surface" style="margin-top:18px">
+      <div class="surface__header"><div><p class="eyebrow">Output</p><h2>Copy into activeOrders</h2></div><p>The raw email and order ID are used in this browser to calculate the hash. They are not saved by this page.</p></div>
+      <label class="field"><span class="label">Generated entry</span><textarea id="entry-output" rows="5" readonly></textarea></label>
+      <p id="helper-status" class="stack-item__meta" role="status" aria-live="polite">Add the generated object to activeOrders in plus-order-access-registry.js, then publish the updated files.</p>
+    </section>
+    <p class="tool-notice">This is the same static purchase-list check used by GED Prep Hub. It does not query Gumroad or update itself when a subscription is canceled. Review renewals and remove access after cancellations, refunds, or disputes.</p>
+    <a href="/tools/">Back to Schmutz Tools ↗</a>
+  </main>
+  <script>
+    const form=document.querySelector('#order-form'),status=document.querySelector('#helper-status'),output=document.querySelector('#entry-output');
+    form.addEventListener('submit',async event=>{event.preventDefault();status.textContent='Generating hash entry…';try{const email=document.querySelector('#buyer-email').value.trim().toLowerCase(),orderId=document.querySelector('#order-id').value.trim().replace(/\s+/g,''),label=(document.querySelector('#entry-label').value||'order-entry').trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'order-entry';const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(`${email}|${orderId}`));const hash=Array.from(new Uint8Array(digest),v=>v.toString(16).padStart(2,'0')).join('');output.value=`{ id: "${label}", hash: "${hash}", note: "Schmutz Plus Gumroad subscription" },`;status.textContent='Hash ready. Add this entry to activeOrders in plus-order-access-registry.js.';}catch{status.textContent='This browser could not generate the hash. Try a current version of Chrome, Edge, Firefox, or Safari.';}});
+  </script>
+</body>
+</html>
