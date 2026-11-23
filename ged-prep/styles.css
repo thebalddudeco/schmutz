@@ -1,16 +1,16 @@
 :root {
-  --bg: #0b1020;
-  --bg-alt: #111933;
-  --panel: rgba(12, 18, 36, 0.94);
-  --line: rgba(159, 177, 214, 0.18);
-  --text: #edf2ff;
-  --muted: #95a3c7;
-  --muted-strong: #bfd0f3;
-  --accent: #7bd6c4;
-  --warning: #f2c266;
-  --danger: #ff857b;
-  --success: #67d08a;
-  --shadow: 0 24px 60px rgba(2, 6, 18, 0.35);
+  --bg: #f3eee4;
+  --bg-alt: #e8dfd0;
+  --panel: #fffdf8;
+  --line: rgba(17, 17, 16, 0.18);
+  --text: #111110;
+  --muted: #68665f;
+  --muted-strong: #393832;
+  --accent: #fa633a;
+  --warning: #a95b18;
+  --danger: #b13a31;
+  --success: #287849;
+  --shadow: 0 24px 60px rgba(37, 29, 19, 0.12);
   --radius-lg: 20px;
   --radius-md: 14px;
   --radius-sm: 10px;
@@ -35,9 +35,9 @@ body {
   color: var(--text);
   font-family: "Segoe UI Variable Text", "Segoe UI", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(123, 214, 196, 0.18), transparent 28%),
-    radial-gradient(circle at top right, rgba(242, 194, 102, 0.14), transparent 24%),
-    linear-gradient(180deg, #07101f 0%, #090d18 52%, #06090f 100%);
+    radial-gradient(circle at top left, rgba(250, 99, 58, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(246, 200, 74, 0.14), transparent 24%),
+    linear-gradient(180deg, #fffaf0 0%, #f3eee4 52%, #ece5d9 100%);
 }
 
 html.access-locked,
@@ -82,10 +82,10 @@ html.access-locked .access-gate {
   width: min(560px, 100%);
   padding: 34px;
   border-radius: 26px;
-  border: 1px solid rgba(159, 177, 214, 0.18);
+  border: 1px solid rgba(17, 17, 16, 0.18);
   background:
-    radial-gradient(circle at top left, rgba(123, 214, 196, 0.12), transparent 34%),
-    linear-gradient(180deg, rgba(19, 28, 54, 0.96), rgba(11, 18, 35, 0.98));
+    radial-gradient(circle at top left, rgba(250, 99, 58, 0.12), transparent 34%),
+    linear-gradient(180deg, rgba(255, 253, 248, 0.96), rgba(243, 238, 228, 0.98));
   box-shadow: var(--shadow);
 }
 
@@ -126,7 +126,7 @@ html.access-locked .access-gate {
   flex-direction: column;
   gap: 18px;
   padding: 28px 24px;
-  background: rgba(5, 10, 22, 0.82);
+  background: #171714;
   border-right: 1px solid var(--line);
   backdrop-filter: blur(18px);
 }
@@ -149,7 +149,7 @@ html.access-locked .access-gate {
   gap: 24px;
   padding: 28px 34px 20px;
   border-bottom: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(7, 13, 26, 0.96), rgba(7, 13, 26, 0.76));
+  background: linear-gradient(180deg, rgba(243, 238, 228, 0.96), rgba(243, 238, 228, 0.76));
   backdrop-filter: blur(20px);
   position: sticky;
   top: 0;
@@ -217,15 +217,15 @@ html.access-locked .access-gate {
 .button:hover,
 .button:focus-visible {
   outline: none;
-  border-color: rgba(123, 214, 196, 0.35);
-  background: rgba(123, 214, 196, 0.08);
+  border-color: rgba(250, 99, 58, 0.35);
+  background: rgba(250, 99, 58, 0.08);
   color: var(--text);
   transform: translateX(2px);
 }
 
 .nav-link.is-active {
-  background: linear-gradient(90deg, rgba(123, 214, 196, 0.18), rgba(123, 214, 196, 0.04));
-  border-color: rgba(123, 214, 196, 0.32);
+  background: linear-gradient(90deg, rgba(250, 99, 58, 0.18), rgba(250, 99, 58, 0.04));
+  border-color: rgba(250, 99, 58, 0.32);
   color: var(--text);
 }
 
@@ -248,7 +248,7 @@ html.access-locked .access-gate {
 .passage-card,
 .subject-summary,
 .empty-state {
-  background: linear-gradient(180deg, rgba(19, 28, 54, 0.92), rgba(11, 18, 35, 0.96));
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.92), rgba(243, 238, 228, 0.96));
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
@@ -378,7 +378,7 @@ html.access-locked .access-gate {
   gap: 16px;
   align-items: center;
   padding: 12px 0;
-  border-bottom: 1px solid rgba(159, 177, 214, 0.08);
+  border-bottom: 1px solid rgba(17, 17, 16, 0.08);
 }
 
 .progress-row:last-child {
@@ -389,7 +389,7 @@ html.access-locked .access-gate {
   position: relative;
   height: 12px;
   border-radius: 999px;
-  background: rgba(159, 177, 214, 0.12);
+  background: rgba(17, 17, 16, 0.12);
   overflow: hidden;
 }
 
@@ -397,7 +397,7 @@ html.access-locked .access-gate {
   position: absolute;
   inset: 0 auto 0 0;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--accent), #4f94ff);
+  background: linear-gradient(90deg, var(--accent), #f6c84a);
 }
 
 .pill {
@@ -407,9 +407,9 @@ html.access-locked .access-gate {
   padding: 7px 10px;
   border-radius: 999px;
   font-size: 0.8rem;
-  background: rgba(123, 214, 196, 0.1);
+  background: rgba(250, 99, 58, 0.1);
   color: var(--muted-strong);
-  border: 1px solid rgba(123, 214, 196, 0.16);
+  border: 1px solid rgba(250, 99, 58, 0.16);
 }
 
 .study-workspace {
@@ -436,7 +436,7 @@ html.access-locked .access-gate {
   width: 100%;
   padding: 12px 14px;
   color: var(--text);
-  background: rgba(5, 10, 22, 0.56);
+  background: #fffdf8;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
 }
@@ -449,15 +449,15 @@ html.access-locked .access-gate {
 }
 
 .button--primary {
-  background: linear-gradient(90deg, var(--accent), #59a8ff);
-  color: #041019;
+  background: linear-gradient(90deg, var(--accent), #f6c84a);
+  color: #111110;
   border-color: transparent;
   font-weight: 700;
 }
 
 .button--secondary {
   border-color: var(--line);
-  background: rgba(159, 177, 214, 0.06);
+  background: rgba(17, 17, 16, 0.06);
 }
 
 .question-card {
@@ -478,11 +478,11 @@ html.access-locked .access-gate {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  border-bottom: 1px solid rgba(159, 177, 214, 0.1);
+  border-bottom: 1px solid rgba(17, 17, 16, 0.1);
 }
 
 .question-card__footer {
-  border-top: 1px solid rgba(159, 177, 214, 0.1);
+  border-top: 1px solid rgba(17, 17, 16, 0.1);
   border-bottom: 0;
 }
 
@@ -516,25 +516,25 @@ html.access-locked .access-gate {
 }
 
 .question-nav__btn {
-  border: 1px solid rgba(159, 177, 214, 0.18);
+  border: 1px solid rgba(17, 17, 16, 0.18);
   border-radius: 10px;
   padding: 10px 0;
-  background: rgba(8, 13, 25, 0.78);
+  background: rgba(232, 223, 208, 0.78);
   color: var(--muted-strong);
 }
 
 .question-nav__btn.is-current {
-  border-color: rgba(123, 214, 196, 0.55);
-  background: rgba(123, 214, 196, 0.16);
+  border-color: rgba(250, 99, 58, 0.55);
+  background: rgba(250, 99, 58, 0.16);
   color: var(--text);
 }
 
 .question-nav__btn.is-correct {
-  border-color: rgba(103, 208, 138, 0.35);
+  border-color: rgba(40, 120, 73, 0.35);
 }
 
 .question-nav__btn.is-incorrect {
-  border-color: rgba(255, 133, 123, 0.35);
+  border-color: rgba(177, 58, 49, 0.35);
 }
 
 .choice {
@@ -542,26 +542,26 @@ html.access-locked .access-gate {
   align-items: start;
   gap: 12px;
   padding: 14px 16px;
-  border: 1px solid rgba(159, 177, 214, 0.12);
+  border: 1px solid rgba(17, 17, 16, 0.12);
   border-radius: var(--radius-md);
-  background: rgba(8, 13, 25, 0.7);
+  background: rgba(232, 223, 208, 0.7);
 }
 
 .choice.is-correct {
-  border-color: rgba(103, 208, 138, 0.4);
-  background: rgba(103, 208, 138, 0.1);
+  border-color: rgba(40, 120, 73, 0.4);
+  background: rgba(40, 120, 73, 0.1);
 }
 
 .choice.is-incorrect {
-  border-color: rgba(255, 133, 123, 0.4);
-  background: rgba(255, 133, 123, 0.1);
+  border-color: rgba(177, 58, 49, 0.4);
+  background: rgba(177, 58, 49, 0.1);
 }
 
 .explanation-box {
   padding: 16px;
   border-radius: var(--radius-md);
-  background: rgba(79, 148, 255, 0.09);
-  border: 1px solid rgba(79, 148, 255, 0.18);
+  background: rgba(246, 200, 74, 0.09);
+  border: 1px solid rgba(246, 200, 74, 0.18);
   color: var(--muted-strong);
   line-height: 1.65;
 }
@@ -588,12 +588,12 @@ html.access-locked .access-gate {
   height: 12px;
   overflow: hidden;
   border-radius: 999px;
-  background: rgba(159, 177, 214, 0.12);
+  background: rgba(17, 17, 16, 0.12);
 }
 
 .chart-bar__fill {
   height: 100%;
-  background: linear-gradient(90deg, #7bd6c4, #59a8ff);
+  background: linear-gradient(90deg, #fa633a, #f6c84a);
 }
 
 .activity-chart {
@@ -624,14 +624,14 @@ html.access-locked .access-gate {
   justify-content: center;
   padding: 8px;
   border-radius: 18px;
-  background: rgba(8, 13, 25, 0.72);
-  border: 1px solid rgba(159, 177, 214, 0.1);
+  background: rgba(232, 223, 208, 0.72);
+  border: 1px solid rgba(17, 17, 16, 0.1);
 }
 
 .activity-bar__column {
   width: 100%;
   border-radius: 999px;
-  background: linear-gradient(180deg, rgba(123, 214, 196, 0.95), rgba(79, 148, 255, 0.72));
+  background: linear-gradient(180deg, rgba(250, 99, 58, 0.95), rgba(246, 200, 74, 0.72));
 }
 
 .activity-bar__label {
@@ -641,7 +641,7 @@ html.access-locked .access-gate {
 .coverage-domain {
   margin-top: 16px;
   padding-top: 16px;
-  border-top: 1px solid rgba(159, 177, 214, 0.1);
+  border-top: 1px solid rgba(17, 17, 16, 0.1);
 }
 
 .coverage-domain:first-of-type {
@@ -681,8 +681,8 @@ html.access-locked .access-gate {
   align-items: center;
   padding: 16px;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(159, 177, 214, 0.1);
-  background: rgba(8, 13, 25, 0.62);
+  border: 1px solid rgba(17, 17, 16, 0.1);
+  background: rgba(232, 223, 208, 0.62);
 }
 
 .coverage-row__main {
