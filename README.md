@@ -39,3 +39,10 @@ Do not run the legacy `scripts/brand-kit.py`: it generates superseded artwork. T
 Canonical project folder: `A:\Schmutz`. Git history is restored here. The approved website patch and latest exports, including Frame 18, are applied. `_migration/2026-10-21-before-consolidation/` preserves the earlier site and build. `_migration/previous-chat/` preserves the previous temporary exports, generators, ZIPs, and handoff. These local archives are excluded from Git and the website build.
 
 Remaining work: pattern replacements and additional social layouts were not completed in the earlier chat; the original patterns are preserved. The site and DNS are connected; GitHub certificate provisioning and HTTPS enforcement are being verified. Real product listings still need to replace the sample concepts. Consolidating local files does not publish the website.
+
+
+## GED Prep Hub
+
+The GED Prep Hub source is consolidated under `products/ged-prep/`. The site build copies its required runtime files into `dist/ged-prep/`, which serves at `https://schmutz.pro/ged-prep/`. The Schmutz Tools directory includes a separate GED Prep Hub membership tile linking to the app.
+
+The live static app still uses a soft purchase gate. Its study app and data are public browser assets; secure recurring-subscription enforcement needs a server-side entitlement check.

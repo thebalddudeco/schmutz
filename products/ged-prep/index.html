@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GED Prep Hub | Schmutz</title>
+  <meta
+    name="description"
+    content="A Schmutz-branded GED study workspace with diagnostics, four subject areas, essay practice, timed exams, progress tracking, and study plans."
+  />
+  <script>
+    document.documentElement.classList.add("access-locked");
+  </script>
+  <link rel="stylesheet" href="styles.css?v=schmutz-study-20261123-2" />
+  <link rel="stylesheet" href="schmutz.css?v=schmutz-study-20261123-2" />
+</head>
+<body>
+  <a class="schmutz-back" href="/tools.html"><img src="../brand/approved/logos/tight/schmutz-wordmark-paper-rust-tm.svg" alt="Schmutz" /><span>Back to Schmutz Tools <b aria-hidden="true">↗</b></span></a>
+  <div class="access-gate" id="access-gate">
+    <div class="access-gate__panel">
+      <p class="eyebrow">Schmutz Tools · Study</p>
+      <h1>Your next GED study session starts here.</h1>
+      <p class="access-gate__copy">
+        A clear, encouraging place to practice across all four subjects, see your progress, and find a useful next step.
+      </p>
+      <form class="access-gate__form" id="access-gate-form">
+        <label class="field">
+          <span class="label">Purchase email</span>
+          <input
+            id="access-email"
+            type="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+            required
+          />
+        </label>
+        <label class="field">
+          <span class="label">Gumroad order ID</span>
+          <input
+            id="access-order-id"
+            type="text"
+            autocomplete="off"
+            placeholder="Paste your Gumroad order ID"
+            required
+          />
+        </label>
+        <div class="button-row">
+          <button class="button button--primary" type="submit">Verify purchase</button>
+        </div>
+      </form>
+      <p class="access-gate__buy">GED Prep Hub membership · <strong>$12.99/month</strong> · Manage or cancel through Gumroad.</p>
+      <p class="access-gate__buy">
+        <a href="https://theschmutz.gumroad.com/l/ged-prep-hub" target="_blank" rel="noopener noreferrer">Get the monthly membership <span aria-hidden="true">↗</span></a>
+      </p>
+      <p class="access-gate__status" id="access-gate-status" role="status" aria-live="polite">
+        Your study progress stays in this browser on this device.
+      </p>
+    </div>
+  </div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <p class="eyebrow">Schmutz Tools · Study</p>
+        <h1>GED Prep Hub</h1>
+        <p class="sidebar__summary">
+          A welcoming study workspace for steady practice, clearer next steps, and exam readiness.
+        </p>
+      </div>
+
+      <nav class="sidebar__nav" aria-label="Primary">
+        <button class="nav-link is-active" data-nav="dashboard">Dashboard</button>
+        <button class="nav-link" data-nav="diagnostics">Diagnostic Center</button>
+        <button class="nav-link" data-nav="math">Math</button>
+        <button class="nav-link" data-nav="rla">Reasoning Through Language Arts</button>
+        <button class="nav-link" data-nav="science">Science</button>
+        <button class="nav-link" data-nav="socialStudies">Social Studies</button>
+        <button class="nav-link" data-nav="essayLab">Essay Lab</button>
+        <button class="nav-link" data-nav="practiceExams">Practice Exams</button>
+        <button class="nav-link" data-nav="progress">Progress Tracker</button>
+        <button class="nav-link" data-nav="studyPlan">Study Plan</button>
+        <button class="nav-link" data-nav="montana">Montana GED Info</button>
+      </nav>
+
+      <div class="sidebar__footer">
+        <div class="mini-stat">
+          <span class="mini-stat__label">Study streak</span>
+          <strong id="streak-chip">0 days</strong>
+        </div>
+        <div class="mini-stat">
+          <span class="mini-stat__label">Time studied</span>
+          <strong id="time-chip">0h 00m</strong>
+        </div>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow" id="active-section-eyebrow">A little progress, every session</p>
+          <h2 id="workspace-title">Dashboard</h2>
+        </div>
+        <div class="topbar__actions">
+          <button class="button button--ghost" id="resume-last-session">Resume last session</button>
+          <div class="readiness-pill">
+            <span>Readiness</span>
+            <strong id="readiness-pill-value">Building baseline</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="panel is-visible" data-panel="dashboard">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Overview</p>
+              <h3>Daily command center</h3>
+            </div>
+            <p class="section-copy">
+              Progress, recent activity, weak spots, and the next smart move will appear here.
+            </p>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-block">
+              <span class="stat-block__label">Overall progress</span>
+              <strong class="stat-block__value" id="dashboard-overall-progress">0%</strong>
+              <span class="stat-block__detail">Tracks completed questions, essays, and diagnostics.</span>
+            </article>
+            <article class="stat-block">
+              <span class="stat-block__label">Recommended next step</span>
+              <strong class="stat-block__value stat-block__value--small" id="dashboard-next-step">Start a diagnostic</strong>
+              <span class="stat-block__detail">Recommendations adapt as study activity builds.</span>
+            </article>
+            <article class="stat-block">
+              <span class="stat-block__label">Recent score</span>
+              <strong class="stat-block__value" id="dashboard-last-score">--</strong>
+              <span class="stat-block__detail">Latest quiz or exam score appears here.</span>
+            </article>
+            <article class="stat-block">
+              <span class="stat-block__label">Essays completed</span>
+              <strong class="stat-block__value" id="dashboard-essay-count">0</strong>
+              <span class="stat-block__detail">Tracked with rubric self-scores and saved notes.</span>
+            </article>
+          </div>
+
+          <div class="dashboard-layout">
+            <div class="surface">
+              <div class="surface__header">
+                <h4>Subject momentum</h4>
+                <p>Each bar reflects completion and accuracy blended into a simple readiness view.</p>
+              </div>
+              <div id="dashboard-subject-progress"></div>
+            </div>
+
+            <div class="surface">
+              <div class="surface__header">
+                <h4>Priority focus</h4>
+                <p>Weak skills, next actions, and coaching notes update from real study behavior.</p>
+              </div>
+              <div id="dashboard-priority-panel" class="stack-list"></div>
+            </div>
+          </div>
+
+          <div class="two-up">
+            <div class="surface">
+              <div class="surface__header">
+                <h4>Recent activity</h4>
+                <p>Saved automatically so progress is still here when you come back.</p>
+              </div>
+              <div id="dashboard-recent-activity" class="stack-list"></div>
+            </div>
+
+            <div class="surface">
+              <div class="surface__header">
+                <h4>Recent scores</h4>
+                <p>Practice and diagnostics feed this rolling score history.</p>
+              </div>
+              <div id="dashboard-recent-scores" class="stack-list"></div>
+            </div>
+          </div>
+
+          <div class="two-up">
+            <div class="surface">
+              <div class="surface__header">
+                <h4>Study activity</h4>
+                <p>A simple recent-study chart makes the routine visible instead of abstract.</p>
+              </div>
+              <div id="dashboard-study-activity"></div>
+            </div>
+
+            <div class="surface">
+              <div class="surface__header">
+                <h4>Readiness drivers</h4>
+                <p>These are the live factors currently shaping the overall readiness estimate.</p>
+              </div>
+              <div id="dashboard-readiness-drivers" class="stack-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" data-panel="diagnostics">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Readiness baseline</p>
+              <h3>Diagnostic Center</h3>
+            </div>
+            <p class="section-copy">
+              Short diagnostics help identify weak topics, set study order, and measure improvement over time.
+            </p>
+          </div>
+
+          <div class="three-up" id="diagnostic-cards"></div>
+          <div class="two-up">
+            <div class="surface">
+              <div class="surface__header">
+                <h4>Diagnostic summary</h4>
+                <p>Recent baseline data is translated into a concise performance snapshot.</p>
+              </div>
+              <div id="diagnostic-summary" class="stack-list"></div>
+            </div>
+
+            <div class="surface">
+              <div class="surface__header">
+                <h4>Recommended study order</h4>
+                <p>Subjects are ranked from highest urgency to lowest based on current evidence.</p>
+              </div>
+              <div id="diagnostic-study-order" class="stack-list"></div>
+            </div>
+          </div>
+          <div class="surface">
+            <div class="surface__header">
+              <h4>Diagnostic history</h4>
+              <p>Retakes and score movement will be stored here.</p>
+            </div>
+            <div id="diagnostic-history" class="stack-list"></div>
+          </div>
+        </section>
+
+        <section class="panel" data-panel="math">
+          <div class="subject-shell">
+            <div class="subject-shell__intro">
+              <p class="eyebrow">Math practice</p>
+              <h3>Math</h3>
+              <p>
+                Build from number sense into algebra, geometry, data interpretation, and multi-step problem solving.
+              </p>
+            </div>
+            <div class="subject-shell__controls" id="math-controls"></div>
+          </div>
+          <div id="math-workspace" class="study-workspace"></div>
+        </section>
+
+        <section class="panel" data-panel="rla">
+          <div class="subject-shell">
+            <div class="subject-shell__intro">
+              <p class="eyebrow">Language arts</p>
+              <h3>Reasoning Through Language Arts</h3>
+              <p>
+                Practice reading, evidence, grammar, revision, editing, and adult-focused comprehension.
+              </p>
+            </div>
+            <div class="subject-shell__controls" id="rla-controls"></div>
+          </div>
+          <div id="rla-workspace" class="study-workspace"></div>
+        </section>
+
+        <section class="panel" data-panel="science">
+          <div class="subject-shell">
+            <div class="subject-shell__intro">
+              <p class="eyebrow">Science literacy</p>
+              <h3>Science</h3>
+              <p>
+                Learn how to read experiments, evaluate evidence, and reason through life, physical, and earth science.
+              </p>
+            </div>
+            <div class="subject-shell__controls" id="science-controls"></div>
+          </div>
+          <div id="science-workspace" class="study-workspace"></div>
+        </section>
+
+        <section class="panel" data-panel="socialStudies">
+          <div class="subject-shell">
+            <div class="subject-shell__intro">
+              <p class="eyebrow">Civics and analysis</p>
+              <h3>Social Studies</h3>
+              <p>
+                Strengthen civics, economics, history, geography, and source analysis with GED-style practice.
+              </p>
+            </div>
+            <div class="subject-shell__controls" id="socialStudies-controls"></div>
+          </div>
+          <div id="socialStudies-workspace" class="study-workspace"></div>
+        </section>
+
+        <section class="panel" data-panel="essayLab">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Extended response</p>
+              <h3>Essay Lab</h3>
+            </div>
+            <p class="section-copy">
+              Plan, draft, compare models, build a thesis, and self-score against the GED extended response rubric.
+            </p>
+          </div>
+          <div id="essay-lab-root"></div>
+        </section>
+
+        <section class="panel" data-panel="practiceExams">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Timed rehearsal</p>
+              <h3>Practice Exams</h3>
+            </div>
+            <p class="section-copy">
+              Timed mini-tests, mixed sets, and full mock exams will live here with score reports and auto-submit logic.
+            </p>
+          </div>
+          <div id="exam-center-root"></div>
+        </section>
+
+        <section class="panel" data-panel="progress">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Study evidence</p>
+              <h3>Progress Tracker</h3>
+            </div>
+            <p class="section-copy">
+              Accuracy, weak skills, trend charts, and readiness signals update from the same saved state used everywhere else.
+            </p>
+          </div>
+          <div id="progress-root"></div>
+        </section>
+
+        <section class="panel" data-panel="studyPlan">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Route map</p>
+              <h3>Study Plan</h3>
+            </div>
+            <p class="section-copy">
+              Structured schedules for different starting points, time windows, and confidence levels.
+            </p>
+          </div>
+          <div id="study-plan-root"></div>
+        </section>
+
+        <section class="panel" data-panel="montana">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">State guidance</p>
+              <h3>Montana GED Info</h3>
+            </div>
+            <p class="section-copy">
+              Official GED and HiSET reminders plus local adult-learning context will be summarized here.
+            </p>
+          </div>
+          <div id="montana-root"></div>
+        </section>
+      </main>
+    </div>
+
+    <aside class="inspector">
+      <div class="inspector__block">
+        <p class="eyebrow">Session</p>
+        <h3>Saved context</h3>
+        <div id="inspector-session" class="stack-list"></div>
+      </div>
+      <div class="inspector__block">
+        <p class="eyebrow">Bookmarks</p>
+        <h3>Review queue</h3>
+        <div id="inspector-bookmarks" class="stack-list"></div>
+      </div>
+      <div class="inspector__block">
+        <p class="eyebrow">Focus</p>
+        <h3>Priority skills</h3>
+        <div id="inspector-priorities" class="stack-list"></div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="data/order-access-registry.js?v=20261123-owner-test-3"></script>
+  <script src="app.js"></script>
+</body>
+</html>
